@@ -19,9 +19,20 @@
 </head>
 
 <body>
-    <nav id="main-navigation">
-
+    <nav id="main-navigation" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact and buy</a>
+        </div>
     </nav>
+    <span id="burger-btn" onclick="openNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+        MENU
+    </span>
 
     <main>
         <!-- about me section -->
@@ -87,4 +98,5 @@
         Designed and coded by Dominika Wojewska. All rights reserved.
     </footer>
 </body>
+
 </html>
