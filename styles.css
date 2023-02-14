@@ -1,7 +1,10 @@
+/* general styles */
+
+
 /********************************************/
 /*** style and position the menu button *****/
 /********************************************/
-
+/* open */
 #menuToggle {
     float: right;
     padding: 2rem;
@@ -21,7 +24,7 @@
     float: right;
     padding: 2rem;
 }
-
+/* close */
 #myNav span {
     display: block;
     width: 33px;
@@ -74,9 +77,7 @@
     text-decoration: none;
     font-size: 36px;
     color: #818181;
-    /* display: block; */
     transition: 0.3s;
-
 }
 
 .overlay a:hover,
@@ -84,8 +85,25 @@
     color: #f1f1f1;
 }
 
-/* .overlay .closebtn {
-    font-size: 60px;
-    float: right;
-    padding: 0 2rem;
-  } */
+/********************************************/
+/************* gallery section **************/
+/********************************************/
+
+#gallery {
+    background-color: black;
+    color: yellow;
+}
+
+.img-gallery {
+   display: grid;
+   width: 100vw;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   gap: 2rem;
+   padding: 2rem;
+   border: 2px solid red;
+}
+
+img {
+    height: 100%;
+}
