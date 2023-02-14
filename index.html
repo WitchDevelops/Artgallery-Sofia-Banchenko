@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,13 +17,74 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <nav>
+    <nav id="main-navigation">
 
     </nav>
 
-    <main class="gallery">
-        <img></img>
+    <main>
+        <!-- about me section -->
+        <section id="about">
+            <h2>About</h2>
+            <p>My name is Sofia Banchenko. I paint abstract geometrical shapes. Or whatever.</p>
+        </section>
+
+        <!-- image gallery section -->
+        <section id="gallery">
+            <h2>Gallery</h2>
+
+            <figure>
+                <img src="./assets/img/Taisia 2022-09.jpg" alt="Taisia painting from September 2022 by Sofia Banchenko">
+                <figcaption>"Taisia" - oil on canvas, September 2022</figcaption>
+            </figure>
+
+            <figure>
+                <img src="./assets/img/Absinth 2022-07.jpg" alt="Absinth painting from July 2022 by Sofia Banchenko">
+                <figcaption>"Absinth" - oil on canvas, July 2022</figcaption>
+            </figure>
+
+            <figure>
+                <img src="./assets/img/Gebärdensprache 2022-06.jpg"
+                    alt="Gebärdensprache painting from June 2022 by Sofia Banchenko">
+                <figcaption>"Gebärdensprache" - oil on canvas, June 2022</figcaption>
+            </figure>
+
+            <figure>
+                <img src="./assets/img/Watermelon man 2022-05.jpg"
+                    alt="Watermelon man painting from May 2022 by Sofia Banchenko">
+                <figcaption>"Watermelon man" - oil on canvas, May 2022</figcaption>
+            </figure>
+
+            <figure>
+                <img src="./assets/img/Fossil 2022-04.jpg" alt="Fossil painting from April 2022 by Sofia Banchenko">
+                <figcaption>"Fossil" - oil on canvas, April 2022</figcaption>
+            </figure>
+
+            <figure>
+                <img src="./assets/img/Schwarzer Holländer 2022-03.jpg"
+                    alt="Schwarzer Holländer painting from March 2022 by Sofia Banchenko">
+                <figcaption>"Schwarzer Holländer" - oil on canvas, March 2022</figcaption>
+            </figure>
+        </section>
+
+        <!-- contact section -->
+        <section id="contact">
+            <h2>Get in touch to buy a painting</h2>
+            <div id="contact-mail">
+                <h3>Contact form</h3>
+                <form action=""> <!-- add sending -->
+                    <label for="message">Send me a message</label>
+                    <textarea id="message" name="message" placeholder="Write it here..."></textarea>
+                    <input type="submit" value="Send">
+                </form>
+                <h3>Or send me an email directly to <a
+                        href="mailto:sofia.banchenko@googlemail.com">sofia.banchenko@googlemail.com</a></h3>
+            </div>
+        </section>
     </main>
+    <footer>
+        Designed and coded by Dominika Wojewska. All rights reserved.
+    </footer>
 </body>
 </html>
