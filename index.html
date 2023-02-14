@@ -19,20 +19,30 @@
 </head>
 
 <body>
-    <nav id="main-navigation" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <!-- burger icon -->
+    <div role="main-navigation" id="menuToggle" onclick="openNav()">
+        <!-- check ARIA role for navigation control-->
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Full screen overlay menu -->
+    <nav id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+            <!-- &times; -->
+            <span></span>
+            <span></span>
+        </a>
+
+        <!-- content of the menu -->
         <div class="overlay-content">
             <a href="#about">About</a>
             <a href="#gallery">Gallery</a>
             <a href="#contact">Contact and buy</a>
         </div>
+
     </nav>
-    <span id="burger-btn" onclick="openNav()">
-        <span></span>
-        <span></span>
-        <span></span>
-        MENU
-    </span>
 
     <main>
         <!-- about me section -->
@@ -97,6 +107,15 @@
     <footer>
         Designed and coded by Dominika Wojewska. All rights reserved.
     </footer>
+    <script>
+        function openNav() {
+          document.getElementById("myNav").style.width = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }
+        </script>
 </body>
 
 </html>
