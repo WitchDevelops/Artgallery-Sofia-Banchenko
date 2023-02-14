@@ -1,5 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,400;1,200&display=swap');
 /* general styles */
+body {
+    /* come up with nice fonts */
+    font-family: 'Poppins', sans-serif;
+}
 
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 10rem;
+}
+
+h2 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 5rem;
+}
+/* light italic for dates? */
 
 /********************************************/
 /*** style and position the menu button *****/
@@ -10,12 +25,14 @@
     padding: 2rem;
 }
 
+/* add media query to hide burger on big screens */
+
 #menuToggle span {
     display: block;
     width: 33px;
     height: 4px;
     margin-bottom: 5px;
-    background: black;
+    background: grey;
     border-radius: 3px;
     z-index: 1;
 }
