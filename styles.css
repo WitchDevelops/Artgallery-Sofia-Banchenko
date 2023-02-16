@@ -41,7 +41,12 @@ h2 {
     right: 1.5rem;
 }
 
-/* add media query to hide burger on big screens */
+/* hide burger on desktop */
+@media screen and (min-width: 600px) {
+    #menuToggle {
+        display: none;
+    }
+}
 
 #menuToggle span {
     display: block;
@@ -81,13 +86,13 @@ h2 {
 /***** style the flyout fullscreen menu *****/
 /********************************************/
 .overlay {
-    height: 100vh;
-    width: 0;
+    
+   
     position: fixed;
     z-index: 1;
     right: 0;
     top: 0;
-    background-color: rgba(34, 40, 49, 0.99);
+    background-color: rgba(34, 40, 49, 0.95);
     overflow-x: hidden;
     transition: 0.5s;
 }
@@ -118,6 +123,42 @@ h2 {
 .overlay a:active {
     color: var(--main-dark-800);
     background-color: #FFD369;
+}
+
+/* show topnav on desktop */
+@media screen and (min-width: 600px) {
+   #myNav {
+    width: 100%;
+   }
+
+    .overlay {
+    position: fixed;
+    width: 100vw;
+    height: 3rem;
+    display: flex;
+    justify-content: flex-end;
+        align-items: center;
+        overflow-y: hidden;
+   }
+    .overlay-content {
+       display: block;
+    position: absolute;
+    height: unset;
+    }
+
+    .menu-links {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .overlay a {
+        font-size: 1.1rem;
+        width: 150px;
+    }
+    /* hide x closing btn */
+    .closebtn {
+        display: none;
+    }
 }
 
 /********************************************/
