@@ -11,6 +11,9 @@
     /* font styles */
     --ff-main: 'Poppins', 'Arial', sans-serif;
     --ff-accent: 'Abril Fatface', serif;
+
+    /* utility classes */
+    --nav-height: 3rem;
 }
 
 html {
@@ -22,7 +25,8 @@ body {
     font-family: var(--ff-main);
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: var(--ff-accent);
 }
 
@@ -39,6 +43,10 @@ h3 {
 }
 
 /* light italic for dates? */
+
+section {
+    padding-top: var(--nav-height);
+}
 
 /********************************************/
 /*** style and position the menu button *****/
@@ -95,8 +103,8 @@ h3 {
 /***** style the flyout fullscreen menu *****/
 /********************************************/
 .overlay {
-    
-   
+
+
     position: fixed;
     z-index: 1;
     right: 0;
@@ -136,23 +144,24 @@ h3 {
 
 /* show topnav on desktop */
 @media screen and (min-width: 600px) {
-   #myNav {
-    width: 100%;
-   }
+    #myNav {
+        width: 100%;
+    }
 
     .overlay {
-    position: fixed;
-    width: 100vw;
-    height: 3rem;
-    display: flex;
-    justify-content: flex-end;
+        position: fixed;
+        width: 100vw;
+        height: var(--nav-height);
+        display: flex;
+        justify-content: flex-end;
         align-items: center;
         overflow-y: hidden;
-   }
+    }
+
     .overlay-content {
-       display: block;
-    position: absolute;
-    height: unset;
+        display: block;
+        position: absolute;
+        height: unset;
     }
 
     .menu-links {
@@ -164,6 +173,7 @@ h3 {
         font-size: 1.1rem;
         width: 150px;
     }
+
     /* hide x closing btn */
     .closebtn {
         display: none;
@@ -174,7 +184,56 @@ h3 {
 /************* home section **************/
 /********************************************/
 
+#home {
+    height: 100vh;
+    background-image: url(./assets/bg/home-bg-small.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    color: var(--light);
+}
 
+/* animation for the main heading */
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
+	        animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
+}
+
+/* ---------------------------------------- */
+/*        animation tracking-in-expand      */
+/* ---------------------------------------- */
+@-webkit-keyframes tracking-in-expand {
+ 0% {
+   letter-spacing: -0.5em;
+   opacity: 0;
+ }
+ 40% {
+   opacity: 0.6;
+ }
+ 100% {
+   opacity: 1;
+ }
+}
+@keyframes tracking-in-expand {
+ 0% {
+   letter-spacing: -0.5em;
+   opacity: 0;
+ }
+ 40% {
+   opacity: 0.6;
+ }
+ 100% {
+   opacity: 1;
+ }
+}
+
+@media screen and (min-width: 600px) {
+    #home {
+        background-image: url(./assets/bg/home-bg-big.svg);
+    }
+}
 
 /********************************************/
 /************* gallery section **************/
@@ -186,13 +245,13 @@ h3 {
 }
 
 .img-gallery {
-   display: grid;
-   width: 100vw;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: 1fr 1fr 1fr;
-   gap: 2rem;
-   padding: 2rem;
-   border: 2px solid red;
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    border: 2px solid red;
 }
 
 img {

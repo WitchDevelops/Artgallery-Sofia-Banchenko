@@ -1,1 +1,87 @@
-<svg id="visual" viewBox="0 0 390 844" width="390" height="844" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect x="0" y="0" width="390" height="844" fill="#393E46"></rect><g fill="none" stroke="#FFD369" stroke-width="4"><circle r="138" cx="371" cy="597"></circle><circle r="68" cx="184" cy="72"></circle><circle r="128" cx="327" cy="314"></circle><circle r="76" cx="26" cy="644"></circle></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="visual"
+   viewBox="0 0 390 844"
+   width="390"
+   height="844"
+   version="1.1"
+   sodipodi:docname="circle-scatter-haikei (1).svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs17" />
+  <sodipodi:namedview
+     id="namedview15"
+     pagecolor="#ffffff"
+     bordercolor="#cccccc"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.99170616"
+     inkscape:cx="62.014337"
+     inkscape:cy="421.49582"
+     inkscape:window-width="2560"
+     inkscape:window-height="1377"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g12" />
+  <rect
+     x="-527.37396"
+     y="0"
+     width="1454.8315"
+     height="844"
+     fill="#393e46"
+     id="rect2"
+     style="stroke-width:1.93141" />
+  <g
+     fill="none"
+     stroke="#ffd369"
+     stroke-width="4"
+     id="g12"
+     transform="translate(1.0083632,5.041816)">
+    <circle
+       r="138"
+       cx="480.91159"
+       cy="723.04541"
+       id="circle4" />
+    <ellipse
+       cx="-360.99405"
+       cy="214.78133"
+       id="circle4-3"
+       rx="114.17408"
+       ry="110.14062"
+       style="stroke-width:3.25041" />
+    <circle
+       r="68"
+       cx="184"
+       cy="72"
+       id="circle6" />
+    <circle
+       r="128"
+       cx="371.36798"
+       cy="341.2258"
+       id="circle8" />
+    <circle
+       r="76"
+       cx="26"
+       cy="644"
+       id="circle10" />
+    <circle
+       r="128"
+       cx="-409.39548"
+       cy="739.13025"
+       id="circle8-5" />
+    <circle
+       r="68"
+       cx="807.69891"
+       cy="235.957"
+       id="circle6-0" />
+  </g>
+</svg>
