@@ -36,8 +36,9 @@ h2 {
 /********************************************/
 /* open */
 #menuToggle {
-    float: right;
-    padding: 2rem;
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
 }
 
 /* add media query to hide burger on big screens */
@@ -47,15 +48,16 @@ h2 {
     width: 33px;
     height: 4px;
     margin-bottom: 5px;
-    background: grey;
+    background: var(--contrast);
     border-radius: 3px;
     z-index: 1;
 }
 
 #myNav .closebtn {
     float: right;
-    padding: 2rem;
+    padding: 1.5rem;
 }
+
 /* close */
 #myNav span {
     display: block;
@@ -63,7 +65,7 @@ h2 {
     height: 4px;
     margin-bottom: 10px;
     border-radius: 3px;
-    background: white;
+    background: var(--contrast);
     transform-origin: 4px 0px;
 }
 
@@ -85,8 +87,7 @@ h2 {
     z-index: 1;
     right: 0;
     top: 0;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(34, 40, 49, 0.99);
     overflow-x: hidden;
     transition: 0.5s;
 }
@@ -105,16 +106,18 @@ h2 {
 }
 
 .overlay a {
-    padding: 8px;
+    padding: 0.5rem;
     text-decoration: none;
-    font-size: 36px;
-    color: #818181;
+    font-size: 2.5rem;
+    color: var(--contrast);
     transition: 0.3s;
 }
 
 .overlay a:hover,
-.overlay a:focus {
-    color: #f1f1f1;
+.overlay a:focus,
+.overlay a:active {
+    color: var(--main-dark-800);
+    background-color: #FFD369;
 }
 
 /********************************************/
