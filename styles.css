@@ -20,7 +20,7 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+    /* scroll-snap-type: y mandatory; */
 }
 
 body {
@@ -50,7 +50,7 @@ section {
     padding: var(--nav-height) 2rem 2rem 2rem;
     min-height: 100vh;
     /* width: 100svw; */
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
 }
 
 @media (min-width: 600px) {
@@ -342,4 +342,31 @@ font-size: 1.2rem;
 #gallery .button {
     color: var(--main-dark-800);
     margin-bottom: 2rem;
+}
+
+/********************************************/
+/************* footer section **************/
+/********************************************/
+
+footer {
+    background-color: var(--main-dark-800);
+    text-align: center;
+    color: var(--contrast);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
+footer hr {
+    width: 80vw;
+    margin: auto;
+    border-top: 1px solid var(--contrast);
+}
+
+footer a:hover,
+footer a:focus,
+footer a:active {
+    color: var(--contrast-d);
 }
