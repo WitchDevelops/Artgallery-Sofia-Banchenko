@@ -5,6 +5,7 @@
     /* color palette */
     --main-dark-800: #222831;
     --main-dark-600: #393E46;
+    --main-dark-200: #e3e4e6;
     --contrast: #FFD369;
     --contrast-d: #ebbb4c;
     --light: #EEEEEE;
@@ -31,6 +32,8 @@ body {
 
 h1 {
     font-family: var(--ff-accent);
+    color: var(--contrast);
+    text-shadow: 6px -5px 0px var(--main-dark-800);
     font-size: clamp(5rem, 2.5000rem + 11.1111vw, 10rem);
 }
 
@@ -44,6 +47,11 @@ h2 {
 h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: var(--contrast);
 }
 
 section {
@@ -315,6 +323,10 @@ font-size: 1.2rem;
 #gallery {
     background-color: var(--main-dark-800);
     color: var(--contrast);
+    background-image: url(./assets/bg/magicpattern-blob-1676459660677.png);
+    background-repeat: no-repeat;
+    background-position: top -250px right -250px;
+    background-size: 40%;
 }
 
 .img-gallery {
@@ -345,6 +357,66 @@ font-size: 1.2rem;
 }
 
 /********************************************/
+/************* contact section **************/
+/********************************************/
+
+#contact {
+    background-image: url(./assets/bg/corner-blob.png);
+    background-repeat: no-repeat;
+    background-position: bottom 0 right 0;
+    background-size: 40%;
+    background-color: var(--main-dark-600);
+    color: var(--light);
+}
+
+@media screen and (min-width: 600px) {
+    #contact {
+background-size: 20%;
+    }
+}
+
+#contact-mail {
+    display: grid;
+    /* flex-direction: column; */
+    gap: 2rem;
+    /* align-items: center; */
+    justify-content: center;
+    /* align-content: center; */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    gap: 1rem;
+}
+
+textarea {
+    border: 1px solid var(--contrast);
+    background-color: var(--main-dark-200);
+    border-radius: 0.5rem;
+}
+
+textarea::placeholder {
+    color: var(--main-dark-600);
+    padding: 0.5rem;
+}
+
+#contact .button {
+    color: var(--main-dark-800);
+}
+
+#contact a {
+    color: var(--contrast);
+}
+
+#contact a:focus,
+#contact a:hover,
+#contact a:active {
+    color: var(--contrast-d);
+}
+
+/********************************************/
 /************* footer section **************/
 /********************************************/
 
@@ -359,11 +431,11 @@ footer {
     font-size: 0.9rem;
 }
 
-footer hr {
+/* footer hr {
     width: 80vw;
     margin: auto;
     border-top: 1px solid var(--contrast);
-}
+} */
 
 footer a:hover,
 footer a:focus,
