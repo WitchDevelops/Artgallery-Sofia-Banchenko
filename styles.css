@@ -43,19 +43,19 @@ h2 {
 
 h3 {
     font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 section {
-    padding: var(--nav-height) 4rem 0 4rem;
+    padding: var(--nav-height) 2rem 2rem 2rem;
     min-height: 100vh;
     /* width: 100svw; */
     scroll-snap-align: start;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 600px) {
     section {
-        padding: var(--nav-height) 0rem 0 2rem;
-        border: 2px solid red;
+        padding: var(--nav-height) 4rem 0 4rem;
     }
 }
 /* link styled as a button */
@@ -88,6 +88,11 @@ background-color: var(--contrast-d);
     right: 1.5rem;
 }
 
+#menuToggle:hover,
+#menuToggle:active {
+    cursor: pointer;
+}
+
 /* hide burger on desktop */
 @media screen and (min-width: 600px) {
     #menuToggle {
@@ -108,6 +113,11 @@ background-color: var(--contrast-d);
 #myNav .closebtn {
     float: right;
     padding: 1.5rem;
+}
+
+#myNav .closebtn:hover,
+#myNav .closebtn:active {
+    background-color: unset;
 }
 
 /* close */
@@ -137,8 +147,6 @@ background-color: var(--contrast-d);
 /***** style the flyout fullscreen menu *****/
 /********************************************/
 .overlay {
-
-
     position: fixed;
     z-index: 1;
     right: 0;
@@ -277,14 +285,8 @@ article {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 2rem 0;
     justify-content: center;
     justify-items: center;
-    width: 90vw;
-}
-
-#about img {
-    /* margin: auto; */
 }
 
 figure {
@@ -292,6 +294,14 @@ figure {
     margin: auto;
     display: flex;
     flex-direction: column;
+
+}
+
+figure img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    margin: auto;
 }
 
 figcaption p {
@@ -319,24 +329,6 @@ font-size: 1.2rem;
         flex-direction: row;
     }
 }
-.img-gallery {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr; */
-    /* gap: 2rem; */
-    /* padding: 2rem 0; */
-}
-
-#gallery figure {
-    /* height: 100%; */
-    width: 90vw;
-}
-
-#gallery img {
-/* object-fit: cover; */
-/* width: 100%; */
-}
-
 
 #gallery figcaption {
     display: flex;
@@ -349,8 +341,5 @@ font-size: 1.2rem;
 
 #gallery .button {
     color: var(--main-dark-800);
+    margin-bottom: 2rem;
 }
-
-/* img {
-    height: 100%;
-} */
