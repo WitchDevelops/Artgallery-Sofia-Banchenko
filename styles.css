@@ -25,7 +25,7 @@ html {
 
 body {
     font-family: var(--ff-main);
-    width: 100vw;
+    /* width: 100svw; */
     overflow-x: hidden;
 }
 
@@ -42,20 +42,20 @@ h2 {
 }
 
 h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
-
-/* light italic for dates? */
 
 section {
     padding: var(--nav-height) 4rem 0 4rem;
     min-height: 100vh;
+    /* width: 100svw; */
     scroll-snap-align: start;
 }
 
 @media (max-width: 600px) {
     section {
-        padding: var(--nav-height) 2rem 0 2rem;
+        padding: var(--nav-height) 0rem 0 2rem;
+        border: 2px solid red;
     }
 }
 /* link styled as a button */
@@ -76,7 +76,6 @@ letter-spacing: 0.045em;
 .button:hover,
 .button:active {
 background-color: var(--contrast-d);
-/* border: 2px solid var(--main-dark-600); */
 }
 
 /********************************************/
@@ -128,6 +127,10 @@ background-color: var(--contrast-d);
 
 #myNav span:last-child {
     transform: rotate(-45deg) translate(-3px, -1px);
+}
+
+#myNav {
+    width: 0;
 }
 
 /********************************************/
