@@ -7,7 +7,7 @@ I've also learned how to code an animation to a card: slide up more information 
 
 # TODO
 * work on SEO
-* add animation to images
+* ~~add animation to images~~
 * add POST to the form
 * ~~set aspect ratio to images in the gallery~~
 * ~~finish up the design~~
