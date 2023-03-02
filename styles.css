@@ -21,12 +21,10 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
-    /* scroll-snap-type: y mandatory; */
 }
 
 body {
     font-family: var(--ff-main);
-    /* width: 100svw; */
     overflow-x: hidden;
 }
 
@@ -34,7 +32,13 @@ h1 {
     font-family: var(--ff-accent);
     color: var(--contrast);
     text-shadow: 6px -5px 0px var(--main-dark-800);
-    font-size: clamp(5rem, 2.5000rem + 11.1111vw, 10rem);
+    text-align: center;
+    font-size: clamp(3.5rem, 3.3432rem + 4.8246vw, 8rem);
+    /* font-size: clamp(4.5rem, 2.5000rem + 11.1111vw, 8rem); */
+}
+
+h1 .smaller {
+    font-size: clamp(3.313rem, 2.7195rem + 2.6378vw, 4.5rem);
 }
 
 h2 {
@@ -242,7 +246,9 @@ background-color: var(--contrast-d);
     display: grid;
     text-align: center;
     align-items: center;
+    /* align-content: center; */
     color: var(--light);
+    padding: var(--nav-height) 0;
 }
 
 /* animation for the main heading */
