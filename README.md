@@ -8,7 +8,7 @@ I've also learned how to code an animation to a card: slide up more information 
 # TODO
 * work on SEO
 * ~~add animation to images~~
-* add POST to the form
+* add PHP to the form to make it send emails
 * ~~set aspect ratio to images in the gallery~~
 * ~~finish up the design~~
 * ~~style contact section~~
