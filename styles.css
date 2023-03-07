@@ -5,6 +5,7 @@
     /* color palette */
     --main-dark-800: #222831;
     --main-dark-600: #393E46;
+    --main-dark-400: #979fac;
     --main-dark-200: #e3e4e6;
     --contrast: #FFD369;
     --contrast-d: #ebbb4c;
@@ -484,15 +485,25 @@ form {
     gap: 1rem;
 }
 
-textarea {
+input, textarea {
     border: 1px solid var(--contrast);
     background-color: var(--main-dark-200);
+    color: var(--main-dark-800);
     border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+input::placeholder,
+textarea::placeholder {
+    color: var(--main-dark-400);
 }
 
-textarea::placeholder {
-    color: var(--main-dark-600);
-    padding: 0.5rem;
+fieldset {
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    width: 50%;
 }
 
 #contact .button {
