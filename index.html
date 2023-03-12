@@ -32,6 +32,9 @@
     <!-- Styles -->
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
+
+    <!-- scripts-->
+    <script src="form.js"></script>
 </head>
 
 <body>
@@ -177,7 +180,7 @@
             <h2>Get in touch</h2>
             <div id="contact-mail">
                 <!-- <h3>Contact form</h3> -->
-                <form action=""> <!-- add sending PHP -->
+                <form method="POST" action="https://formsubmit.co/sofia.banchenko@googlemail.com">
                     <label for="message">
                         <h3>I'd love to hear from you!</h3>
                     </label>
@@ -188,10 +191,12 @@
                         <input id="email" name="email" type="email" required placeholder="Your email"/>
                     </fieldset>
                     <textarea id="message" name="message" placeholder="Your message..." rows="5"></textarea>
-                    <input class="button" type="submit" value="Send">
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_template" value="box">
+                    <input class="button" type="submit" value="Send" onclick="sendEmail()">
                 </form>
-                <p>Or send me an email directly to <a
-                        href="mailto:sofia.banchenko@googlemail.com">sofia.banchenko@googlemail.com</a></p>
+                <!-- <p>Or send me an email directly to <a
+                        href="mailto:sofia.banchenko@googlemail.com">sofia.banchenko@googlemail.com</a></p> -->
             </div>
         </section>
     </main>
