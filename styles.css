@@ -399,9 +399,9 @@ figcaption p {
 }
 
 #gallery figure {
-    transition: all 0.5s cubic-bezier(.25, .8, .25, 1);
+    transition: all 1s cubic-bezier(.25, .8, .25, 1);
     position: relative;
-overflow: hidden;
+    overflow: hidden;
 }
 
 #gallery figure h3 {
@@ -415,15 +415,19 @@ overflow: hidden;
     width: 100%;
     text-align: center;
     line-height: 1;
-    opacity: 1;
+    /* opacity: 1; */
     transform: scale(1);
     transition: 0.25s ease;
+    background-color: hsla(217, 10%, 25%, 50%);
     /* z-index: 999; */
 }
 
 #gallery figure:hover h3 {
-    opacity: 0;
     transform: scale(0.7);
+}
+
+#gallery figure img {
+    transition: all 0.2s cubic-bezier(.25, .8, .25, 1);
 }
 
 #gallery figure:hover img {
@@ -441,13 +445,14 @@ overflow: hidden;
     bottom: -90px;
     padding: 0.5rem;
     transition: 0.25s ease;
-    /* background-color: var(--main-dark-800); */
+    background-color: hsla(217, 10%, 25%, 50%);
     backdrop-filter: blur(10px);
+    text-shadow: 3px -2px 7px var(--main-dark-800);
 }
 
 #gallery figure:hover figcaption {
     bottom: 0;
-    background-color: var(--main-dark-800);
+    background-color: hsla(217, 10%, 25%, 80%);
 }
 
 /********************************************/
@@ -478,14 +483,16 @@ overflow: hidden;
     /* align-content: center; */
 }
 
-form, fieldset {
+form,
+fieldset {
     display: flex;
     flex-direction: column;
     max-width: 600px;
     gap: 1rem;
 }
 
-input, textarea {
+input,
+textarea {
     border: 1px solid var(--contrast);
     background-color: var(--main-dark-200);
     color: var(--main-dark-800);
@@ -493,6 +500,7 @@ input, textarea {
     padding: 0.5rem;
     width: 100%;
 }
+
 input::placeholder,
 textarea::placeholder {
     color: var(--main-dark-400);
