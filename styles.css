@@ -478,7 +478,7 @@ overflow: hidden;
     /* align-content: center; */
 }
 
-form {
+form, fieldset {
     display: flex;
     flex-direction: column;
     max-width: 600px;
@@ -491,23 +491,16 @@ input, textarea {
     color: var(--main-dark-800);
     border-radius: 0.5rem;
     padding: 0.5rem;
+    width: 100%;
 }
 input::placeholder,
 textarea::placeholder {
     color: var(--main-dark-400);
 }
 
-fieldset {
-    display: flex;
-    justify-content: space-between;
-}
-
-input {
-    width: 50%;
-}
-
 #contact .button {
     color: var(--main-dark-800);
+    margin-top: 1rem;
 }
 
 #contact a {
