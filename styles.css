@@ -88,6 +88,7 @@ section {
     font-weight: 600;
     line-height: 174%;
     letter-spacing: 0.045em;
+    margin-bottom: 2rem;
 }
 
 .button:focus,
