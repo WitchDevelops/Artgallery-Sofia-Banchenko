@@ -399,9 +399,16 @@ figcaption p + p {
   margin: auto;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 790px) {
   .img-gallery {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .img-gallery {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -414,6 +421,7 @@ figcaption p + p {
   transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
   overflow: hidden;
+  border-radius: 8px;
 }
 
 #gallery figure h3 {
@@ -437,7 +445,16 @@ figcaption p + p {
 }
 
 #gallery figure img {
-  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: opacity 0s linear, padding 0s linear,
+    transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  opacity: 0.5;
+  padding: 100px;
+}
+
+#gallery figure img.loaded {
+  opacity: 1;
+  width: 100%;
+  padding: unset;
 }
 
 #gallery figure:hover img {
