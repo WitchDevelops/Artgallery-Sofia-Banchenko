@@ -73,7 +73,7 @@ images.forEach((image) => {
   const figure = `
     <figure>
       <h3>${image.title}</h3>
-      <img src="${image.src}" alt="${image.alt}" loading="lazy" oncontextmenu="return false;">
+      <img src="/assets/img/loading.gif" data-src="${image.src}" alt="${image.alt}" loading="lazy" oncontextmenu="return false;">
       <figcaption>
         <h4>More info</h4>
         <p>${image.title}</p>
@@ -83,4 +83,26 @@ images.forEach((image) => {
   `;
 
   gallery.insertAdjacentHTML("beforeend", figure);
+});
+
+// implement lazy loading to load an image when it enters the viewport
+
+const handleIntersection = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      img.src = img.dataset.src;
+      img.onload = () => {
+        img.classList.add("loaded");
+      };
+      observer.unobserve(img);
+    }
+  });
+};
+
+const observer = new IntersectionObserver(handleIntersection);
+const imgs = gallery.querySelectorAll("img");
+
+imgs.forEach((img) => {
+  observer.observe(img);
 });
