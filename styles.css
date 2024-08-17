@@ -399,9 +399,16 @@ figcaption p + p {
   margin: auto;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 790px) {
   .img-gallery {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .img-gallery {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -414,6 +421,7 @@ figcaption p + p {
   transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
   overflow: hidden;
+  border-radius: 8px;
 }
 
 #gallery figure h3 {
