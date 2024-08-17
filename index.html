@@ -36,8 +36,7 @@
 
 <body>
   <!-- burger icon -->
-  <div role="navigation" id="menuToggle" onclick="openNav()">
-    <!-- check ARIA role for navigation control-->
+  <div role="navigation" id="menuToggle" onclick="openNav()" aria-label="Open navigation menu">
     <span></span>
     <span></span>
     <span></span>
@@ -45,8 +44,7 @@
 
   <!-- Full screen overlay menu -->
   <nav role="navigation" id="myNav" class="overlay">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
-      <!-- &times; -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" aria-label="Close navigation menu">
       <span></span>
       <span></span>
     </a>
@@ -73,7 +71,7 @@
       <div class="scale-in-center">
         <a href="#gallery">
           <p>See the art gallery</p>
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <svg class="icon" alt="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
             <path
               d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
           </svg>
@@ -266,7 +264,7 @@
   <footer>
     <p>
       Designed and coded by
-      <a href="https://www.mokosh.dev/" target="blank">Dominika Wojewska in 2022</a>.
+      <a href="https://www.mokosh.dev/" target="blank" rel="noopener noreferrer">Dominika Wojewska in 2022</a>.
       All rights reserved.
     </p>
   </footer>
