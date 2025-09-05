@@ -28,3 +28,7 @@ Click the image to open the prototype in Figma
 * ~~add about me section~~
 * ~~fix navigation~~
 * add a modal to image upon click
+
+## Open issues
+
+https://github.com/WitchDevelops/Artgallery-Sofia-Banchenko/issues
