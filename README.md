@@ -1,5 +1,5 @@
 # About
-This project is a showcase of modern art by Sofia Banchenko. The main purpose of this page is to help out a friend gain some web presence and give her some space to present her artwork to potential customers, together with contact information.
+This project is a showcase of modern art by my friend, who doesn't want to be googled. The main purpose of this project is to help out a friend gain some web presence and give her a personal space to present her artwork to potential customers, together with contact information.
 
 # See it live
 [https://sofiabanchenko.com/](https://sofiabanchenko.com/)
@@ -7,7 +7,11 @@ This project is a showcase of modern art by Sofia Banchenko. The main purpose of
 
 # Prototype
 Click the image to open the prototype in Figma
-[![](https://github.com/WitchDevelops/Artgallery-Sofia-Banchenko/blob/main/protype/prototype-iPhone.png)](https://www.figma.com/proto/TcsRJoR5cuPde1ZqHdur8f/Sofia's-art?node-id=1-2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A2)
+
+<a href="https://www.figma.com/proto/TcsRJoR5cuPde1ZqHdur8f/Sofia's-art?node-id=1-2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A2">
+    <img width="50" height="50" src="https://raw.githubusercontent.com/gilbarbara/logos/de2c1f96ff6e74ea7ea979b43202e8d4b863c655/logos/figma.svg">
+    <p>See the early prototype</p>
+</a>
 
 # What I learned
 * How to code a fully responsive navbar using JavaScript! It's been a bane of me for a while.
