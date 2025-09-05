@@ -392,6 +392,7 @@ figcaption p + p {
   flex-wrap: wrap;
   flex-direction: column;
   margin: auto;
+  max-width: 1400px;
 }
 
 @media (min-width: 790px) {
