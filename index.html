@@ -2,33 +2,33 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Abstract Oil Paintings Gallery</title>
   <meta name="description"
-    content="Explore this abstract oil paintings gallery featuring vibrant colors and unique textures. Learn more about the artist and contact her for inquiries." />
-  <meta name="keywords" content="abstract art, oil paintings, gallery, contemporary art" />
-  <meta name="author" content="Dominika Wojewska" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Oil Paintings Gallery" />
-  <meta property="og:image" content="./assets/img/cover.png" />
+    content="Explore this abstract oil paintings gallery featuring vibrant colors and unique textures. Learn more about the artist and contact her for inquiries.">
+  <meta name="keywords" content="abstract art, oil paintings, gallery, contemporary art">
+  <meta name="author" content="Dominika Wojewska">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Oil Paintings Gallery">
+  <meta property="og:image" content="./assets/img/cover.png">
 
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
-  <link rel="manifest" href="/favicon_io/site.webmanifest" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="/favicon_io/site.webmanifest">
 
   <!-- Google Fonts import -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="reset.css" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="styles.css">
 
   <!-- scripts-->
   <script src="form.js"></script>
@@ -43,7 +43,7 @@
   </div>
 
   <!-- Full screen overlay menu -->
-  <nav role="navigation" id="myNav" class="overlay">
+  <nav id="myNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" aria-label="Close navigation menu">
       <span></span>
       <span></span>
@@ -64,14 +64,14 @@
   <main>
     <!-- home section -->
     <section id="home">
-      <hgroup>
+      <div>
         <h1 class="tracking-in-expand">Sofia</h1>
         <h1 class="tracking-in-expand smaller">Banchenko</h1>
-      </hgroup>
+      </div>
       <div class="scale-in-center">
         <a href="#gallery">
           <p>See the art gallery</p>
-          <svg class="icon" alt="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
             <path
               d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
           </svg>
@@ -81,25 +81,26 @@
     <!-- about me section -->
     <section id="about">
       <h2>About</h2>
-      <article>
+      <div class="article">
         <figure>
-          <img src="./assets/img/Making art-bro (2).svg" alt="artist person" />
+          <img src="./assets/img/Making-art-bro.svg" alt="artist person">
           <figcaption>
             <p>
-              I am <important>Sofia Banchenko</important>, studied drawing and aquarelle painting from 1993 to 1997 at State School Nr.26 in Petersburg. Painting is my true passion. Through my work, I hope to inspire you.
+              I studied drawing and aquarelle painting from 1993 to 1997 at State School Nr.26 in Petersburg. Painting
+              is my true passion. Through my work, I hope to inspire you.
             </p>
           </figcaption>
         </figure>
         <a class="button" href="#contact">email me</a>
-      </article>
+      </div>
     </section>
 
     <!-- image gallery section -->
     <section id="gallery">
       <h2>Gallery</h2>
-      <article class="img-gallery">
+      <div class="article img-gallery">
         <!-- image gallery generated with JS, to make it easier for me to add new images -->
-      </article>
+      </div>
     </section>
 
     <!-- contact section -->
@@ -109,16 +110,17 @@
         <form method="POST" action="https://formsubmit.co/a1c1bda21dcad002cde6e04559842863">
           <h3>I'd love to hear from you!</h3>
           <fieldset>
-            <label for="email" type="email">
-              <h4>Your email:</h4>
+            <label for="email" class="form-label">
+              Your email:
             </label>
-            <input id="email" name="email" type="email" required placeholder="Your email" />
-            <label for="message" type="text">
-              <h4>Your message:</h4>
+            <input id="email" name="email" type="email" required placeholder="Your email">
+
+            <label for="message" class="form-label">
+              Your message:
             </label>
             <textarea id="message" name="message" placeholder="Your message..." rows="5"></textarea>
           </fieldset>
-          <input class="button" type="submit" value="Send" onclick="sendEmail()" />
+          <input class="button" type="submit" value="Send" onclick="sendEmail()">
         </form>
       </div>
     </section>
