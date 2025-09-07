@@ -2,8 +2,7 @@
 This project is a showcase of modern art by my friend, who doesn't want to be googled. The main purpose of this project is to help out a friend gain some web presence and give her a personal space to present her artwork to potential customers, together with contact information.
 
 # See it live
-[https://sofiabanchenko.com/](https://sofiabanchenko.com/)
-
+[soba-art.com/](soba-art.com/)
 
 # Prototype
 Click the image to open the prototype in Figma
