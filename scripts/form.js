@@ -1,80 +1,70 @@
 const form = document.querySelector("#contact-form");
 const statusEl = document.querySelector("#contact-status");
-const fieldLabel = document.querySelectorAll(".form-label");
-const emailInput = form.email;
-const messageInput = form.message;
-const emailError = document.querySelector("#email-error");
-const messageError = document.querySelector("#message-error");
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const clearFieldErrors = () => {
-  emailError.textContent = "";
-  messageError.textContent = "";
-  emailInput.classList.remove("input-error");
-  messageInput.classList.remove("input-error");
-  fieldLabel.forEach((label) => {
-    label.classList.remove("label-error");
-  });
+const getLabel = (input) => {
+  return document.querySelector(`label[for="${input.id}"]`);
 };
 
 const setFieldError = (input, errorEl, message) => {
   input.classList.add("input-error");
   errorEl.textContent = message;
-  fieldLabel.forEach((label) => {
-    if (label.htmlFor === input.id) {
-      label.classList.add("label-error");
-    }
-  });
+  getLabel(input)?.classList.add("label-error");
 };
 
 const clearInputError = (input, errorEl) => {
   input.classList.remove("input-error");
   errorEl.textContent = "";
-  fieldLabel.forEach((label) => {
-    if (label.htmlFor === input.id) {
-      label.classList.remove("label-error");
-    }
-  });
+  getLabel(input)?.classList.remove("label-error");
 };
 
-emailInput.addEventListener("input", () => {
-  clearInputError(emailInput, emailError);
+const fields = [
+  {
+    input: form.elements.email,
+    error: document.querySelector("#email-error"),
+    validate: (value) =>
+      !value || !emailRegex.test(value)
+        ? "Please enter a valid email address."
+        : null,
+  },
+  {
+    input: form.elements.message,
+    error: document.querySelector("#message-error"),
+    validate: (value) => (!value ? "Please enter a message." : null),
+  },
+];
+
+const clearFieldErrors = () => {
+  fields.forEach(({ input, error }) => clearInputError(input, error));
+};
+
+fields.forEach(({ input, error }) => {
+  input.addEventListener("input", () => {
+    clearInputError(input, error);
+  });
 });
 
-messageInput.addEventListener("input", () => {
-  clearInputError(messageInput, messageError);
-});
-
+// TODO: wire this to an email backend (EmailJS, FormSubmit, your own API)
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   clearFieldErrors();
-
-  const email = emailInput.value.trim();
-  const message = messageInput.value.trim();
-
   const errors = [];
 
-  if (!email || !emailRegex.test(email)) {
-    setFieldError(
-      emailInput,
-      emailError,
-      "Please enter a valid email address.",
-    );
-    errors.push(emailInput);
-  }
-
-  if (!message) {
-    setFieldError(messageInput, messageError, "Please enter a message.");
-    errors.push(messageInput);
-  }
+  fields.forEach(({ input, error, validate }) => {
+    const value = input.value.trim();
+    const errorMessage = validate(value);
+    if (errorMessage) {
+      setFieldError(input, error, errorMessage);
+      errors.push(input);
+    }
+  });
 
   if (errors.length > 0) {
     errors[0].focus();
     return;
   }
 
-  // TODO: wire this to an email backend (EmailJS, FormSubmit, your own API)
   statusEl.textContent = "Your message was sent! Thank you.";
 
   form.reset();
