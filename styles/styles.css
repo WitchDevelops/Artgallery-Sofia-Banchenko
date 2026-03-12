@@ -10,6 +10,8 @@
   --contrast: #ffd369;
   --contrast-d: #ebbb4c;
   --light: #eeeeee;
+  --error: #fb9489;
+  --success: #7ed957;
 
   /* font styles */
   --ff-main: "Poppins", "Arial", sans-serif;
@@ -239,7 +241,7 @@ section {
 
 #home {
   height: 100vh;
-  background-image: url("./assets/bg/home-bg-small.svg");
+  background-image: url("/assets/bg/home-bg-small.svg");
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
@@ -329,7 +331,7 @@ section {
 
 @media screen and (min-width: 600px) {
   #home {
-    background-image: url(./assets/bg/home-bg-big.svg);
+    background-image: url("/assets/bg/home-bg-big.svg");
   }
 }
 
@@ -380,7 +382,7 @@ figcaption p + p {
 #gallery {
   background-color: var(--main-dark-800);
   color: var(--contrast);
-  background-image: url("./assets/bg/magicpattern-blob-1676459660677.png");
+  background-image: url("/assets/bg/magicpattern-blob-1676459660677.png");
   background-repeat: no-repeat;
   background-position: top -250px right -250px;
   background-size: 30%;
@@ -485,7 +487,7 @@ figcaption p + p {
 /********************************************/
 
 #contact {
-  background-image: url("./assets/bg/corner-blob.png");
+  background-image: url("/assets/bg/corner-blob.png");
   background-repeat: no-repeat;
   background-position: bottom 0 right 0;
   background-size: 40%;
@@ -516,6 +518,8 @@ fieldset {
 .form-label {
   font-size: 1.2rem;
   color: var(--contrast);
+  display: block;
+  margin: 0 0 0.35rem 0;
 }
 
 input,
@@ -528,15 +532,24 @@ textarea {
   width: 100%;
 }
 
+input:focus,
+textarea:focus,
+.menu-links a:focus,
+.button:focus {
+  outline: 3px solid var(--contrast);
+  outline-offset: 2px;
+}
+
 input.input-error,
 textarea.input-error {
-  border-color: salmon;
-  box-shadow: 0 0 0 3px rgba(255, 99, 71, 0.25);
+  outline: 3px solid var(--error);
+  outline-offset: 2px;
+  box-shadow: 0px 0px 12px 4px var(--error);
 }
 
 .field-error {
   margin: 0.35rem 0 0;
-  color: salmon;
+  color: var(--error);
   font-size: 0.9rem;
   min-height: 1.2em;
 }
@@ -556,6 +569,10 @@ textarea::placeholder {
 #contact .button {
   color: var(--main-dark-800);
   margin-top: 1rem;
+}
+
+#contact .button:hover {
+  cursor: pointer;
 }
 
 #contact a {
