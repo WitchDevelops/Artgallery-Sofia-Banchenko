@@ -559,6 +559,11 @@ textarea.input-error {
   color: var(--error);
 }
 
+.input-success {
+  outline: 3px solid var(--success);
+  outline-offset: 2px;
+}
+
 input::placeholder,
 textarea::placeholder {
   color: var(--main-dark-400);
