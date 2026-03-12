@@ -593,6 +593,11 @@ textarea::placeholder {
   color: var(--contrast-d);
 }
 
+.hp-field {
+  position: absolute;
+  left: -9999px;
+}
+
 /********************************************/
 /************* footer section **************/
 /********************************************/

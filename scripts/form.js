@@ -1,6 +1,8 @@
 const form = document.querySelector("#contact-form");
 const statusEl = document.querySelector("#contact-status");
 const submitButton = form.querySelector('input[type="submit"]');
+const honeypot = form.elements.website; // hidden field to trap bots
+const formLoadTime = Date.now(); // add a timestamp to detect very fast submissions (bots)
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -78,6 +80,15 @@ fields.forEach(({ input, error, validate }) => {
 
 // TODO: wire this to an email backend (EmailJS, FormSubmit, your own API)
 form.addEventListener("submit", async (event) => {
+  // bot fills the field - silently fail
+  if (honeypot.value) {
+    return;
+  }
+  // if form is submitted too quickly, it's likely a bot - silently fail
+  if (Date.now() - formLoadTime < 3000) {
+    return;
+  }
+
   event.preventDefault();
   clearFieldErrors();
   const errors = [];
