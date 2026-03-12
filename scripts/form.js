@@ -26,6 +26,24 @@ const setFieldError = (input, errorEl, message) => {
   });
 };
 
+const clearInputError = (input, errorEl) => {
+  input.classList.remove("input-error");
+  errorEl.textContent = "";
+  fieldLabel.forEach((label) => {
+    if (label.htmlFor === input.id) {
+      label.classList.remove("label-error");
+    }
+  });
+};
+
+emailInput.addEventListener("input", () => {
+  clearInputError(emailInput, emailError);
+});
+
+messageInput.addEventListener("input", () => {
+  clearInputError(messageInput, messageError);
+});
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   clearFieldErrors();
@@ -58,24 +76,4 @@ form.addEventListener("submit", (event) => {
   statusEl.textContent = "Your message was sent! Thank you.";
 
   form.reset();
-});
-
-emailInput.addEventListener("input", () => {
-  emailInput.classList.remove("input-error");
-  emailError.textContent = "";
-  fieldLabel.forEach((label) => {
-    if (label.htmlFor === emailInput.id) {
-      label.classList.remove("label-error");
-    }
-  });
-});
-
-messageInput.addEventListener("input", () => {
-  messageInput.classList.remove("input-error");
-  messageError.textContent = "";
-  fieldLabel.forEach((label) => {
-    if (label.htmlFor === messageInput.id) {
-      label.classList.remove("label-error");
-    }
-  });
 });
