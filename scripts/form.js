@@ -104,6 +104,7 @@ form.addEventListener("submit", async (event) => {
 
     statusEl.textContent = "Your message was sent! Thank you.";
     form.reset();
+    form.remove();
   } catch (error) {
     statusEl.textContent = "Something went wrong. Please try again.";
   } finally {
