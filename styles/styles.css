@@ -540,11 +540,12 @@ textarea:focus,
   outline-offset: 2px;
 }
 
+/* error styles */
+
 input.input-error,
 textarea.input-error {
   outline: 3px solid var(--error);
   outline-offset: 2px;
-  box-shadow: 0px 0px 12px 4px var(--error);
 }
 
 .field-error {
@@ -554,16 +555,18 @@ textarea.input-error {
   min-height: 1.2em;
 }
 
-.contact-status {
-  min-height: 1.2em;
-  font-weight: 600;
-  line-height: 1.2;
-  margin-bottom: 0.5rem;
+.label-error {
+  color: var(--error);
 }
 
 input::placeholder,
 textarea::placeholder {
   color: var(--main-dark-400);
+}
+
+.contact-status {
+  text-align: center;
+  text-wrap: balance;
 }
 
 #contact .button {

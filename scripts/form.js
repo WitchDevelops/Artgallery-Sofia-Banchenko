@@ -1,5 +1,6 @@
 const form = document.querySelector("#contact-form");
 const statusEl = document.querySelector("#contact-status");
+const fieldLabel = document.querySelectorAll(".field label");
 const emailInput = form.email;
 const messageInput = form.message;
 const emailError = document.querySelector("#email-error");
@@ -10,21 +11,24 @@ const clearFieldErrors = () => {
   messageError.textContent = "";
   emailInput.classList.remove("input-error");
   messageInput.classList.remove("input-error");
-};
-
-const clearStatus = () => {
-  statusEl.textContent = "";
+  fieldLabel.forEach((label) => {
+    label.classList.remove("label-error");
+  });
 };
 
 const setFieldError = (input, errorEl, message) => {
   input.classList.add("input-error");
   errorEl.textContent = message;
+  fieldLabel.forEach((label) => {
+    if (label.htmlFor === input.id) {
+      label.classList.add("label-error");
+    }
+  });
 };
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   clearFieldErrors();
-  clearStatus();
 
   const email = emailInput.value.trim();
   const message = messageInput.value.trim();
@@ -46,17 +50,12 @@ form.addEventListener("submit", (event) => {
   }
 
   if (errors.length > 0) {
-    statusEl.textContent = "Please fix the errors above.";
-    statusEl.style.color = "var(--contrast)";
-    statusEl.style.textAlign = "left";
     errors[0].focus();
     return;
   }
 
   // TODO: wire this to an email backend (EmailJS, FormSubmit, your own API)
   statusEl.textContent = "Your message was sent! Thank you.";
-  statusEl.style.color = "var(--contrast-d)";
-  statusEl.style.textAlign = "center";
 
   form.reset();
 });
@@ -64,11 +63,19 @@ form.addEventListener("submit", (event) => {
 emailInput.addEventListener("input", () => {
   emailInput.classList.remove("input-error");
   emailError.textContent = "";
-  clearStatus();
+  fieldLabel.forEach((label) => {
+    if (label.htmlFor === emailInput.id) {
+      label.classList.remove("label-error");
+    }
+  });
 });
 
 messageInput.addEventListener("input", () => {
   messageInput.classList.remove("input-error");
   messageError.textContent = "";
-  clearStatus();
+  fieldLabel.forEach((label) => {
+    if (label.htmlFor === messageInput.id) {
+      label.classList.remove("label-error");
+    }
+  });
 });
