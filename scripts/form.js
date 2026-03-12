@@ -1,10 +1,12 @@
 const form = document.querySelector("#contact-form");
 const statusEl = document.querySelector("#contact-status");
-const fieldLabel = document.querySelectorAll(".field label");
+const fieldLabel = document.querySelectorAll(".form-label");
 const emailInput = form.email;
 const messageInput = form.message;
 const emailError = document.querySelector("#email-error");
 const messageError = document.querySelector("#message-error");
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const clearFieldErrors = () => {
   emailError.textContent = "";
@@ -53,7 +55,7 @@ form.addEventListener("submit", (event) => {
 
   const errors = [];
 
-  if (!email) {
+  if (!email || !emailRegex.test(email)) {
     setFieldError(
       emailInput,
       emailError,
