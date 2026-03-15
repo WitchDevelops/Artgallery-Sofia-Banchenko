@@ -73,7 +73,7 @@ images.forEach((image) => {
   const figure = `
     <figure>
       <h3>${image.title}</h3>
-      <img src="/assets/img/loading.gif" data-src="${image.src}" alt="${image.alt}" loading="lazy" oncontextmenu="return false;">
+      <img src="/assets/img/loading.gif" data-src="${image.src}" alt="${image.alt}" oncontextmenu="return false;">
       <figcaption>
         <h4>More info</h4>
         <p>${image.title}</p>
