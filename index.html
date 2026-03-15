@@ -108,7 +108,8 @@
 
         <h3 id="contact-status" aria-live="polite" class="contact-status">I'd love to hear from you!</h3>
 
-        <form id="contact-form" method="POST" action="#" novalidate>
+        <form id="contact-form" method="POST" action="https://formsubmit.co/ajax/31d3050045e026941c5fd36d01dd7853"
+          novalidate>
           <fieldset>
             <div class="field">
               <label for="email" class="form-label">
@@ -130,6 +131,9 @@
               <label for="website">Website</label>
               <input type="text" id="website" name="website" autocomplete="off">
             </div>
+            <input type="hidden" name="_subject" value="New message from your website!">
+            <input type="hidden" name="_template" value="box">
+            <input type="hidden" name="_captcha" value="false">
           </fieldset>
 
           <input class="button" type="submit" value="Send">

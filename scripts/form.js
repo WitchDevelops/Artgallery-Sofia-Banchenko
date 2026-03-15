@@ -110,12 +110,29 @@ form.addEventListener("submit", async (event) => {
   setSendingState();
 
   try {
-    // simulate request (replace later with fetch / EmailJS)
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    const formData = new FormData(form);
 
-    statusEl.textContent = "Your message was sent! Thank you.";
-    form.reset();
-    form.remove();
+    const response = await fetch(
+      "https://formsubmit.co/ajax/31d3050045e026941c5fd36d01dd7853", // this is a test endpoint, need to replate this
+      {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      },
+    );
+
+    const data = await response.json();
+
+    if (data.success === true || data.success === "true") {
+      statusEl.textContent = "Your message was sent! Thank you.";
+      form.reset();
+      form.remove();
+    } else {
+      console.error("Form submission error:", data);
+      throw new Error("Form submission failed");
+    }
   } catch (error) {
     statusEl.textContent = "Something went wrong. Please try again.";
   } finally {
