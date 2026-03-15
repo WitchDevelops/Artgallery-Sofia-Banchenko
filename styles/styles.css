@@ -303,6 +303,7 @@ section {
   text-decoration: none;
   font-size: 2.5rem;
   color: var(--contrast);
+  background-color: rgba(34, 40, 49, 0.95);
   transition: 0.3s;
 }
 
