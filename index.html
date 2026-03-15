@@ -27,11 +27,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="stylesheet" href="/styles/styles.css">
 
-  <!-- scripts-->
-  <script src="form.js"></script>
 </head>
 
 <body>
@@ -55,7 +53,6 @@
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#gallery">Gallery</a>
-        <!-- <a href="#contact">Buy</a> -->
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -78,6 +75,7 @@
         </a>
       </div>
     </section>
+
     <!-- about me section -->
     <section id="about">
       <h2>About</h2>
@@ -107,20 +105,38 @@
     <section id="contact">
       <h2>Get in touch</h2>
       <div id="contact-mail">
-        <form method="POST" action="https://formsubmit.co/a1c1bda21dcad002cde6e04559842863">
-          <h3>I'd love to hear from you!</h3>
-          <fieldset>
-            <label for="email" class="form-label">
-              Your email:
-            </label>
-            <input id="email" name="email" type="email" required placeholder="Your email">
 
-            <label for="message" class="form-label">
-              Your message:
-            </label>
-            <textarea id="message" name="message" placeholder="Your message..." rows="5"></textarea>
+        <h3 id="contact-status" aria-live="polite" class="contact-status">I'd love to hear from you!</h3>
+
+        <form id="contact-form" method="POST" action="https://formsubmit.co/ajax/89aa51cfad8676147e56ca0534f81ddf"
+          novalidate>
+          <fieldset>
+            <div class="field">
+              <label for="email" class="form-label">
+                Your email:
+              </label>
+              <input id="email" name="email" type="email" required placeholder="Your email">
+              <p class="field-error" id="email-error" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="message" class="form-label">
+                Your message:
+              </label>
+              <textarea id="message" name="message" placeholder="Your message..." rows="5" required></textarea>
+              <p class="field-error" id="message-error" aria-live="polite"></p>
+            </div>
+
+            <div class="hp-field">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" autocomplete="off">
+            </div>
+            <input type="hidden" name="_subject" value="New message from your website!">
+            <input type="hidden" name="_template" value="box">
+            <input type="hidden" name="_captcha" value="false">
           </fieldset>
-          <input class="button" type="submit" value="Send" onclick="sendEmail()">
+
+          <input class="button" type="submit" value="Send">
         </form>
       </div>
     </section>

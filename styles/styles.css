@@ -10,6 +10,8 @@
   --contrast: #ffd369;
   --contrast-d: #ebbb4c;
   --light: #eeeeee;
+  --error: #fb9489;
+  --success: #7ed957;
 
   /* font styles */
   --ff-main: "Poppins", "Arial", sans-serif;
@@ -239,7 +241,7 @@ section {
 
 #home {
   height: 100vh;
-  background-image: url("./assets/bg/home-bg-small.svg");
+  background-image: url("/assets/bg/home-bg-small.svg");
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
@@ -329,7 +331,7 @@ section {
 
 @media screen and (min-width: 600px) {
   #home {
-    background-image: url(./assets/bg/home-bg-big.svg);
+    background-image: url("/assets/bg/home-bg-big.svg");
   }
 }
 
@@ -380,7 +382,7 @@ figcaption p + p {
 #gallery {
   background-color: var(--main-dark-800);
   color: var(--contrast);
-  background-image: url("./assets/bg/magicpattern-blob-1676459660677.png");
+  background-image: url("/assets/bg/magicpattern-blob-1676459660677.png");
   background-repeat: no-repeat;
   background-position: top -250px right -250px;
   background-size: 30%;
@@ -441,7 +443,9 @@ figcaption p + p {
 }
 
 #gallery figure img {
-  transition: opacity 0s linear, padding 0s linear,
+  transition:
+    opacity 0s linear,
+    padding 0s linear,
     transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   opacity: 0.5;
   padding: 100px;
@@ -483,7 +487,7 @@ figcaption p + p {
 /********************************************/
 
 #contact {
-  background-image: url("./assets/bg/corner-blob.png");
+  background-image: url("/assets/bg/corner-blob.png");
   background-repeat: no-repeat;
   background-position: bottom 0 right 0;
   background-size: 40%;
@@ -514,6 +518,8 @@ fieldset {
 .form-label {
   font-size: 1.2rem;
   color: var(--contrast);
+  display: block;
+  margin: 0 0 0.35rem 0;
 }
 
 input,
@@ -526,14 +532,55 @@ textarea {
   width: 100%;
 }
 
+input:focus,
+textarea:focus,
+.menu-links a:focus,
+.button:focus {
+  outline: 3px solid var(--contrast);
+  outline-offset: 2px;
+}
+
+/* error styles */
+
+input.input-error,
+textarea.input-error {
+  outline: 3px solid var(--error);
+  outline-offset: 2px;
+}
+
+.field-error {
+  margin: 0.35rem 0 0;
+  color: var(--error);
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+
+.label-error {
+  color: var(--error);
+}
+
+.input-success {
+  outline: 3px solid var(--success);
+  outline-offset: 2px;
+}
+
 input::placeholder,
 textarea::placeholder {
   color: var(--main-dark-400);
 }
 
+.contact-status {
+  text-align: center;
+  text-wrap: balance;
+}
+
 #contact .button {
   color: var(--main-dark-800);
   margin-top: 1rem;
+}
+
+#contact .button:hover {
+  cursor: pointer;
 }
 
 #contact a {
@@ -544,6 +591,11 @@ textarea::placeholder {
 #contact a:hover,
 #contact a:active {
   color: var(--contrast-d);
+}
+
+.hp-field {
+  position: absolute;
+  left: -9999px;
 }
 
 /********************************************/
