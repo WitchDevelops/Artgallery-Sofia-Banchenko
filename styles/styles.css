@@ -9,6 +9,7 @@
   --main-dark-200: #e3e4e6;
   --contrast: #ffd369;
   --contrast-d: #ebbb4c;
+  --contrast-text-on-white: #936c10;
   --light: #eeeeee;
   --error: #fb9489;
   --success: #7ed957;
@@ -47,7 +48,7 @@ h2 {
   font-family: var(--ff-main);
   font-size: clamp(3.313rem, 2.7195rem + 2.6378vw, 4.5rem);
   font-weight: bold;
-  color: var(--contrast);
+  color: var(--contrast-text-on-white);
 }
 
 h3 {
@@ -126,6 +127,7 @@ section {
 #myNav .closebtn {
   float: right;
   padding: 1.5rem;
+  cursor: pointer;
 }
 
 #myNav .closebtn:hover,
