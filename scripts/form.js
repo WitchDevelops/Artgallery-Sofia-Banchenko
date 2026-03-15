@@ -113,7 +113,7 @@ form.addEventListener("submit", async (event) => {
     const formData = new FormData(form);
 
     const response = await fetch(
-      "https://formsubmit.co/ajax/31d3050045e026941c5fd36d01dd7853", // this is a test endpoint, need to replate this
+      "https://formsubmit.co/ajax/89aa51cfad8676147e56ca0534f81ddf", // must be repeated in the ACTION attribute in html
       {
         method: "POST",
         body: formData,
