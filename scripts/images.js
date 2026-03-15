@@ -89,14 +89,17 @@ images.forEach((image) => {
 
 const handleIntersection = (entries, observer) => {
   entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      const img = entry.target;
-      img.src = img.dataset.src;
-      img.onload = () => {
-        img.classList.add("loaded");
-      };
-      observer.unobserve(img);
-    }
+    if (!entry.isIntersecting) return;
+
+    const img = entry.target;
+    img.src = img.dataset.src;
+    img.decoding = "async";
+    img.fetchPriority = "low";
+
+    img.onload = () => {
+      img.classList.add("loaded");
+    };
+    observer.unobserve(img);
   });
 };
 
