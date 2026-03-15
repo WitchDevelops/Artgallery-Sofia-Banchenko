@@ -58,6 +58,8 @@ Click the image to open the prototype in Figma
 * ~~style contact section~~
 * ~~add about me section~~
 * ~~fix navigation~~
+* ~~improve the form~~
+* ~~improve accessibility and Lighthouse scores~~
 * add a modal to image upon click
 
 ## Open issues
