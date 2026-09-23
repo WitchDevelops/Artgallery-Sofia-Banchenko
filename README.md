@@ -14,7 +14,7 @@ This project is a showcase of modern art by a friend of mine. The main purpose o
           <p>HTML</p>
         </td>
         <td align="center">
-          <img width="55" height="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/css-3.svg"/>
+          <img width="55" height="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/css.svg"/>
           <p>CSS</p>
         </td>
         <td align="center">
