@@ -154,8 +154,8 @@ h1 {
   font-size: clamp(3.5rem, 3.3432rem + 4.8246vw, 8rem);
 }
 
-h1 .smaller {
-  font-size: clamp(3.313rem, 2.7195rem + 2.6378vw, 4.5rem);
+h1 span {
+  display: block;
 }
 
 h2 {
